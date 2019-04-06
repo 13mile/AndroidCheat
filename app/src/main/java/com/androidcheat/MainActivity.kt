@@ -1,12 +1,15 @@
 package com.androidcheat
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_cheat.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : CheatBaseActivity() {
+    override fun initializeMenus() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        rightMenu.addText("cheat test")
+        rightMenu.addButton("println"){
+            println("hello world cheat android")
+        }
+
     }
+
 }
