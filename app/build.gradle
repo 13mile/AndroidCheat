@@ -9,7 +9,7 @@ android {
         config {
             keyAlias 'test'
             keyPassword 'test1234'
-            storeFile file('/Users/hyundh/MyProject/test1234')
+            storeFile file('../key/test1234')
             storePassword 'test1234'
         }
     }
