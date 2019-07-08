@@ -1,13 +1,23 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.0"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
+    signingConfigs {
+        config {
+            keyAlias 'test'
+            keyPassword 'test1234'
+            storeFile file('../key/test1234')
+            storePassword 'test1234'
+        }
+    }
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -16,9 +26,22 @@ android {
     }
 
     buildTypes {
-        release {
+        all {
+            it.buildConfigField 'boolean', 'DEV', 'false'
+            signingConfig signingConfigs.config
             minifyEnabled false
+        }
+        release {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debugDev {
+            it.buildConfigField 'boolean', 'DEV', 'true'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
 
@@ -27,8 +50,15 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:29.+'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.13mile'
+
+repositories {
+    mavenCentral()
 }
