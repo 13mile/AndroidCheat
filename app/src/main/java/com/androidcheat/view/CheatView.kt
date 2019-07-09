@@ -13,6 +13,7 @@ import android.view.WindowManager
 import android.widget.FrameLayout
 import com.androidcheat.BuildConfig
 import com.androidcheat.R
+import com.androidcheat.cheat.Cheat
 import com.androidcheat.prefs.Prefs
 import com.androidcheat.util.env.Env
 import com.androidcheat.util.env.Ipv4Address
@@ -197,21 +198,25 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
 
         buttonCheat.setOnClickListener {
             toggleExpansionView()
-//            startActivity(CheatActivity::class.java)
+            startActivity(Cheat.cheatActivity)
         }
 
         buttonRestart.setOnClickListener {
             toggleExpansionView()
-//            AppInstance.restart(SplashActivity::class.java)
+            AppInstance.restart(Cheat.initActivity)
         }
 
         buttonNewInstance.setOnClickListener {
-            //            startActivity(SplashActivity::class.java)
+            startActivity(Cheat.initActivity)
         }
 
         buttonLogView.setOnClickListener {
-            it.context.startService(Intent(it.context, FloatingLogViewService::class.java))
-            TLog.d("bsjo push")
+            it.context.startService(
+                Intent(
+                    it.context,
+                    FloatingLogViewService::class.java
+                )
+            )
         }
 
         buttonLaunchLastCheatActivity.setOnClickListener {

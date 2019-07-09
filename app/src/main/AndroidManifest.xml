@@ -27,10 +27,14 @@
         </activity>
 
         <service android:name=".cheat.FloatingViewService"/>
-        <service android:name=".cheat.FloatingLogViewService" />
+        <service android:name=".cheat.FloatingLogViewService"/>
 
         <activity
                 android:name=".permission.GrantPermissionsActivity"
+                android:theme="@style/FullScreenTheme"/>
+
+        <activity
+                android:name=".cheat.CheatActivity"
                 android:theme="@style/FullScreenTheme"/>
 
     </application>
