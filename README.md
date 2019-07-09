@@ -18,7 +18,7 @@ allprojects {
 And add next dependencies in the build.gradle of the module:
 ```gradle
 dependencies {
-    implementation 'com.github.13mile:androidcheat:0.0.11'
+    implementation 'com.github.13mile:androidcheat:0.0.12'
 }
 ```
 
@@ -45,17 +45,50 @@ CheatAcitivity Setting and UseCase:
 ```
 class CheatActivity : CheatBaseActivity(){
      override fun initializeMenus() {
-         rightMenu.addButton("hellow cheat world"){
+         rightMenu.addButton("hello cheat world"){
              //Do Somting
          }
          
-         bottomMenu.addButton("hellow bottom menu"){
+         bottomMenu.addButton("hello bottom menu"){
              //Do Somting
          }
          
-         leftMenu.addButton("hellow left menu"){
+         leftMenu.addButton("hello left menu"){
              //Do Somting
          }
      }
  }    
+```
+
+Manifest setting:
+```
+    <uses-permission
+            android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+            tools:remove="android:maxSdkVersion"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> 
+```
+
+getPermission :
+```
+class MainActivity : CheatBaseActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        GrantPermissionsActivity::class.java
+            .toIntent()
+            .startActivityForResult<DontCare>(this)
+            .subscribe({
+                showDebugInfoView()
+            }, { e ->
+                
+            })
+    }
+
+    private fun showDebugInfoView() {
+        if (BuildConfig.DEV) {
+            startService(Intent(this, FloatingViewService::class.java))
+        }
+    }
+}
 ```
