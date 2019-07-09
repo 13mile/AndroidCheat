@@ -35,7 +35,7 @@ android {
             it.buildConfigField "Integer", "VERSION_SETTINGS", '5'
         }
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             it.buildConfigField 'boolean', 'ALPHA', 'true'
             it.buildConfigField 'boolean', 'DEV', 'false'
@@ -83,8 +83,8 @@ dependencies {
 
 
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.13mile'
-version = '0.0.3'
+group = 'com.github.13mile'
+version = '0.0.4'
 
 
 repositories {
