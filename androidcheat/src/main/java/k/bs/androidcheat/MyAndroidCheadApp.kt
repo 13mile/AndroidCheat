@@ -8,7 +8,7 @@ import rx_activity_result2.RxActivityResult
 class MyAndroidCheadApp:Application() {
     override fun onCreate() {
         super.onCreate()
-//        RxActivityResult.register(this)
+        RxActivityResult.register(this)
 //        Cheat.register<MainActivity, CheatActivity>()
     }
 }

@@ -18,7 +18,7 @@ allprojects {
 And add next dependencies in the build.gradle of the module:
 ```gradle
 dependencies {
-    implementation 'com.github.13mile:androidcheat:0.0.14'
+    implementation 'com.github.13mile:androidcheat:0.0.15'
 }
 ```
 
@@ -75,20 +75,7 @@ class MainActivity : CheatBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        GrantPermissionsActivity::class.java
-            .toIntent()
-            .startActivityForResult<DontCare>(this)
-            .subscribe({
-                showDebugInfoView()
-            }, { e ->
-                
-            })
-    }
-
-    private fun showDebugInfoView() {
-        if (BuildConfig.DEV) {
-            startService(Intent(this, FloatingViewService::class.java))
-        }
+            GrantPermissionCheckManager.check(this)
     }
 }
 ```
