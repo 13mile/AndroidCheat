@@ -31,7 +31,7 @@
         <service android:name="k.bs.androidcheat.cheat.FloatingLogViewService"/>
 
         <activity
-                android:name="com.androidcheat.permission.GrantPermissionsActivity"
+                android:name=".permission.GrantPermissionsActivity"
                 android:theme="@style/FullScreenTheme"/>
 
         <activity

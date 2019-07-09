@@ -3,7 +3,7 @@ package k.bs.androidcheat
 import android.content.Intent
 import android.os.Bundle
 import k.bs.androidcheat.cheat.FloatingViewService
-import com.androidcheat.permission.GrantPermissionsActivity
+import k.bs.androidcheat.permission.GrantPermissionsActivity
 import k.bs.androidcheat.rx.startActivityForResult
 import k.bs.androidcheat.rx.toIntent
 import k.bs.androidcheat.util.DontCare

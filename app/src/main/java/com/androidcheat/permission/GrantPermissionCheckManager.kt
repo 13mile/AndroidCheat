@@ -10,6 +10,7 @@ import k.bs.androidcheat.rx.toIntent
 import k.bs.androidcheat.util.DontCare
 import k.bs.androidcheat.util.TLog
 import io.reactivex.Single
+import k.bs.androidcheat.permission.GrantPermissionsActivity
 import kr.nextm.lib.TToast
 
 object GrantPermissionCheckManager {

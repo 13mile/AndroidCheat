@@ -30,7 +30,7 @@
         <service android:name="k.bs.androidcheat.cheat.FloatingLogViewService"/>
 
         <activity
-                android:name=".permission.GrantPermissionsActivity"
+                android:name="k.bs.androidcheat.permission.GrantPermissionsActivity"
                 android:theme="@style/FullScreenTheme"/>
 
         <activity

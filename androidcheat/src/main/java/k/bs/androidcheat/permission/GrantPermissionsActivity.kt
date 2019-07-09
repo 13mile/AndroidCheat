@@ -1,4 +1,4 @@
-package com.androidcheat.permission
+package k.bs.androidcheat.permission
 
 import android.Manifest
 import android.app.AlertDialog
@@ -9,12 +9,13 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.support.annotation.RequiresApi
-import com.androidcheat.BuildConfig
-import com.androidcheat.R
 import k.bs.androidcheat.rx.BaseRxActivity
 import k.bs.androidcheat.util.DontCare
 import k.bs.androidcheat.util.ignoreNotUsedWarning
 import com.tbruyelle.rxpermissions2.RxPermissions
+import k.bs.androidcheat.BuildConfig
+import k.bs.androidcheat.R
+import k.bs.androidcheat.util.getString
 import kotlinx.android.synthetic.main.layout_grant_permission.*
 import kr.nextm.lib.TToast
 
