@@ -1,5 +1,4 @@
-[![Release](https://jitpack.io/v/13mile/androidcheat.svg)]
-         (https://jitpack.io/#13mile/androidcheat)
+[![Release](https://jitpack.io/v/13mile/androidcheat.svg)](https://jitpack.io/#13mile/androidcheat)
 
 # AndroidCheat
 
