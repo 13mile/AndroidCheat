@@ -17,7 +17,7 @@
             android:layout_weight="3">
 
             <LinearLayout
-                android:id="@+id/leftMenu"
+                android:id="@+id/lMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -39,7 +39,7 @@
             android:layout_weight="3">
 
             <LinearLayout
-                android:id="@+id/rightMenu"
+                android:id="@+id/rMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -56,7 +56,7 @@
         android:layout_weight="2">
 
         <LinearLayout
-            android:id="@+id/bottomMenu"
+            android:id="@+id/bMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

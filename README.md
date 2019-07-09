@@ -18,7 +18,7 @@ allprojects {
 And add next dependencies in the build.gradle of the module:
 ```gradle
 dependencies {
-    implementation 'com.github.13mile:androidcheat:0.0.19'
+    implementation 'com.github.13mile:androidcheat:0.0.20'
 }
 ```
 
@@ -71,11 +71,15 @@ Manifest setting:
 
 getPermission :
 ```
-class MainActivity : CheatBaseActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Cheat.getPermission(this)
+    }
 
-            GrantPermissionCheckManager.check(this)
+    override fun onResume() {
+        super.onResume()
+        Cheat.showDebugInfoView(this)
     }
 }
 ```
