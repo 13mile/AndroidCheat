@@ -26,28 +26,37 @@ dependencies {
 
 
 Application class onCreate() in word:
-''' 
+```
 class App:Application() {
           override fun onCreate() {
           super.onCreate()
 
-          **Cheat.register<MainActivity, CheatActivity>()**
-          **//{MainActivity} your initialize activity ,,**
-          **// MainActivity have Intent filter (action.MAIN) And you have to specify (category.LAUNCHER).**
+          Cheat.register<MainActivity, CheatActivity>()
+          //{MainActivity} your initialize activity 
+          // MainActivity have Intent filter (action.MAIN) And you have to specify (category.LAUNCHER).
           
-          ** {CheatActivity} your cheating activity.**
-          ** {CheatActivity} inherits CheatBaseActivity.**
+          //{CheatActivity} your cheating activity.
+          //{CheatActivity} inherits CheatBaseActivity.
           }
 }
-'''
+```
 
 
 CheatAcitivity Setting and UseCase:
-''' 
+```
 class CheatActivity : CheatBaseActivity(){
-         override fun initializeMenus() {
-                  rightMenu.addButton("hellow cheat worl")
+     override fun initializeMenus() {
+         rightMenu.addButton("hellow cheat world"){
+             //Do Somting
          }
-}
-        
-'''
+         
+         bottomMenu.addButton("hellow bottom menu"){
+             //Do Somting
+         }
+         
+         leftMenu.addButton("hellow left menu"){
+             //Do Somting
+         }
+     }
+ }    
+```
