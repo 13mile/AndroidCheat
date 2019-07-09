@@ -21,9 +21,10 @@ object GrantPermissionCheckManager {
             }, { e ->
                 TLog.e(e)
                 TToast.show(
-                    R.string.app_will_run_after_getting_essential_permissions)
+                    R.string.app_will_run_after_getting_essential_permissions
+                )
             })
-            .let {  }
+            .let { }
     }
 
     fun checkWithRx(context: Context): Single<DontCare> {
@@ -37,9 +38,7 @@ object GrantPermissionCheckManager {
     }
 
 
-    private fun showDebugInfoView(context: Context) {
-        if (BuildConfig.DEV) {
-            context.startService(Intent(context, FloatingViewService::class.java))
-        }
+    fun showDebugInfoView(context: Context) {
+        context.startService(Intent(context, FloatingViewService::class.java))
     }
 }
