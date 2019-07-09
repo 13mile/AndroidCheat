@@ -18,7 +18,7 @@ allprojects {
 And add next dependencies in the build.gradle of the module:
 ```gradle
 dependencies {
-    implementation 'com.github.13mile:androidcheat:0.0.16'
+    implementation 'com.github.13mile:androidcheat:0.0.17'
 }
 ```
 
@@ -81,5 +81,7 @@ class MainActivity : CheatBaseActivity() {
 ```
 
 
-floating Cheat View :
+floating Cheat View :  
+
+
 ![device-2019-07-09-173805](https://user-images.githubusercontent.com/39984656/60873300-1fcc5600-a271-11e9-809b-753b8f2128df.png)
