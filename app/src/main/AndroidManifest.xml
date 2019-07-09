@@ -3,15 +3,7 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.androidcheat">
 
-    <uses-permission
-            android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-            tools:remove="android:maxSdkVersion"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-
-
     <application
-            android:name=".App"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -25,17 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <service android:name=".cheat.FloatingLogViewService"/>
-        <service android:name=".cheat.FloatingLogViewService"/>
-
-        <activity
-                android:name=".permission.GrantPermissionsActivity"
-                android:theme="@style/FullScreenTheme"/>
-
-        <activity
-                android:name=".cheat.CheatActivity"
-                android:theme="@style/FullScreenTheme"/>
 
     </application>
 
