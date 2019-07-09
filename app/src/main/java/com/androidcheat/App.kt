@@ -1,8 +1,9 @@
 package com.androidcheat
 
 import android.app.Application
-import com.androidcheat.cheat.Cheat
-import com.androidcheat.cheat.CheatActivity
+import k.bs.androidcheat.cheat.Cheat
+import k.bs.androidcheat.cheat.CheatActivity
+import k.bs.androidcheat.MainActivity
 import rx_activity_result2.RxActivityResult
 
 class App:Application() {

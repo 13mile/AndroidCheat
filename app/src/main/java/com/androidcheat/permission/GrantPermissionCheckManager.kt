@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import com.androidcheat.BuildConfig
 import com.androidcheat.R
-import com.androidcheat.cheat.FloatingViewService
-import com.androidcheat.rx.startActivityForResult
-import com.androidcheat.rx.toIntent
-import com.androidcheat.util.DontCare
-import com.androidcheat.util.TLog
+import k.bs.androidcheat.cheat.FloatingViewService
+import k.bs.androidcheat.rx.startActivityForResult
+import k.bs.androidcheat.rx.toIntent
+import k.bs.androidcheat.util.DontCare
+import k.bs.androidcheat.util.TLog
 import io.reactivex.Single
 import kr.nextm.lib.TToast
 

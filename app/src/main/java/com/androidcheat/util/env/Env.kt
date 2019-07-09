@@ -1,6 +1,7 @@
 package com.androidcheat.util.env
 
 import android.os.Build
+import k.bs.androidcheat.util.env.DeviceHardwareSerial
 
 /**
  * Runtime 환경에 정해지는 속성들 정리

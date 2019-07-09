@@ -2,8 +2,8 @@ package com.androidcheat.rx
 
 import android.app.Activity
 import android.content.Intent
-import com.androidcheat.ActivityBase
-import com.androidcheat.exception.CanceledByUserException
+import k.bs.androidcheat.ActivityBase
+import k.bs.androidcheat.exception.CanceledByUserException
 import java.lang.reflect.Type
 
 

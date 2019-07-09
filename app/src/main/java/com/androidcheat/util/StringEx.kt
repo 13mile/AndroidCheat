@@ -4,7 +4,7 @@ import android.os.Build
 import android.text.Html
 import android.text.Spanned
 import com.androidcheat.BuildConfig
-import com.androidcheat.rx.toDialogMessageElse
+import k.bs.androidcheat.rx.toDialogMessageElse
 import kr.nextm.lib.AppInstance
 
 fun CharSequence.wrapWith(): CharSequence {

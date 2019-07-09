@@ -1,6 +1,6 @@
 package com.androidcheat.cheat
 
-import com.androidcheat.CheatBaseActivity
+import k.bs.androidcheat.CheatBaseActivity
 import kotlinx.android.synthetic.main.activity_cheat.*
 
 class CheatActivity : CheatBaseActivity(){

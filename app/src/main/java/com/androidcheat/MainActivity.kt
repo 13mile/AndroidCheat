@@ -2,13 +2,13 @@ package com.androidcheat
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
-import com.androidcheat.cheat.FloatingViewService
+import k.bs.androidcheat.cheat.FloatingViewService
 import com.androidcheat.permission.GrantPermissionsActivity
-import com.androidcheat.rx.startActivityForResult
-import com.androidcheat.rx.toIntent
-import com.androidcheat.util.DontCare
-import com.androidcheat.util.TLog
+import k.bs.androidcheat.rx.startActivityForResult
+import k.bs.androidcheat.rx.toIntent
+import k.bs.androidcheat.util.DontCare
+import k.bs.androidcheat.util.TLog
+import k.bs.androidcheat.CheatBaseActivity
 import kotlinx.android.synthetic.main.activity_cheat.*
 import kr.nextm.lib.TToast
 

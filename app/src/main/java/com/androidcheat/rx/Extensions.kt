@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
 import com.androidcheat.R
-import com.androidcheat.util.GsonHelper
+import k.bs.androidcheat.util.GsonHelper
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.exceptions.CompositeException

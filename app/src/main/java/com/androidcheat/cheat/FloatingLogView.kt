@@ -10,10 +10,10 @@ import android.view.View.OnTouchListener
 import android.view.WindowManager
 import android.widget.*
 import com.androidcheat.R
-import com.androidcheat.model.LogLevel
-import com.androidcheat.prefs.Prefs
-import com.androidcheat.rx.mainThread
-import com.androidcheat.rx.onClickWithAnimation
+import k.bs.androidcheat.model.LogLevel
+import k.bs.androidcheat.prefs.Prefs
+import k.bs.androidcheat.rx.mainThread
+import k.bs.androidcheat.rx.onClickWithAnimation
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable

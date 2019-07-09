@@ -1,6 +1,7 @@
 package com.androidcheat.type
 
-import com.androidcheat.util.GsonHelper
+import k.bs.androidcheat.type.OutputType
+import k.bs.androidcheat.util.GsonHelper
 import java.io.Serializable
 
 open class JsonElementAs(val obj: Any, val outputType: OutputType) : Serializable {

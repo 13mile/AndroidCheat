@@ -6,8 +6,8 @@ import android.content.ContextWrapper
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.androidcheat.exception.CanceledByUserException
-import com.androidcheat.util.GsonHelper
+import k.bs.androidcheat.exception.CanceledByUserException
+import k.bs.androidcheat.util.GsonHelper
 import io.reactivex.Completable
 import io.reactivex.Single
 import kr.nextm.lib.AppInstance

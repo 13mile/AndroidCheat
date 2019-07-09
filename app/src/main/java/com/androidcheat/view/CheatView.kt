@@ -13,18 +13,17 @@ import android.view.WindowManager
 import android.widget.FrameLayout
 import com.androidcheat.BuildConfig
 import com.androidcheat.R
-import com.androidcheat.cheat.Cheat
-import com.androidcheat.prefs.Prefs
-import com.androidcheat.util.env.Env
-import com.androidcheat.util.env.Ipv4Address
+import k.bs.androidcheat.cheat.Cheat
+import k.bs.androidcheat.prefs.Prefs
+import k.bs.androidcheat.util.env.Env
+import k.bs.androidcheat.util.env.Ipv4Address
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.layout_floating_cheat_widget.view.*
 import kr.nextm.lib.AppInstance
 import kr.nextm.lib.PreferencesHelper
-import com.androidcheat.cheat.FloatingLogViewService
-import kr.nextm.lib.TLog
+import k.bs.androidcheat.cheat.FloatingLogViewService
 import java.util.concurrent.TimeUnit
 
 

@@ -11,10 +11,10 @@ import android.provider.Settings
 import android.support.annotation.RequiresApi
 import com.androidcheat.BuildConfig
 import com.androidcheat.R
-import com.androidcheat.rx.BaseRxActivity
-import com.androidcheat.util.DontCare
-import com.androidcheat.util.getString
-import com.androidcheat.util.ignoreNotUsedWarning
+import k.bs.androidcheat.rx.BaseRxActivity
+import k.bs.androidcheat.util.DontCare
+import k.bs.androidcheat.util.getString
+import k.bs.androidcheat.util.ignoreNotUsedWarning
 import com.tbruyelle.rxpermissions2.RxPermissions
 import kotlinx.android.synthetic.main.layout_grant_permission.*
 import kr.nextm.lib.TToast

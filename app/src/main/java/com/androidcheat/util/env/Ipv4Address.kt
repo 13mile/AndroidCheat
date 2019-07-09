@@ -1,6 +1,6 @@
 package com.androidcheat.util.env
 
-import com.androidcheat.util.toSafeInt
+import k.bs.androidcheat.util.toSafeInt
 import java.net.InetAddress
 import java.net.NetworkInterface
 import java.net.SocketException
