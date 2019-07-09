@@ -27,6 +27,7 @@
         </activity>
 
         <service android:name=".cheat.FloatingViewService"/>
+        <service android:name=".cheat.FloatingLogViewService" />
 
         <activity
                 android:name=".permission.GrantPermissionsActivity"
