@@ -30,17 +30,25 @@ android {
             it.buildConfigField 'boolean', 'DEV', 'false'
             signingConfig signingConfigs.config
             minifyEnabled false
+            it.buildConfigField "String", "BUILD_DATE", "\"" + getDateMMddHHmm() + "\""
+            it.buildConfigField "Long", "BUILD_DATE_MILLIS", '' + getDate() + 'L'
+            it.buildConfigField "Integer", "VERSION_SETTINGS", '5'
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            it.buildConfigField 'boolean', 'ALPHA', 'true'
+            it.buildConfigField 'boolean', 'DEV', 'false'
             signingConfig signingConfigs.config
         }
         debugDev {
             it.buildConfigField 'boolean', 'DEV', 'true'
+            it.buildConfigField 'boolean', 'ALPHA', 'false'
             signingConfig signingConfigs.config
         }
         debug {
+            it.buildConfigField 'boolean', 'DEV', 'true'
+            it.buildConfigField 'boolean', 'ALPHA', 'false'
             signingConfig signingConfigs.config
         }
     }
@@ -64,3 +72,12 @@ version = '0.0.1'
 repositories {
     mavenCentral()
 }
+
+static def getDate() {
+    System.currentTimeMillis()
+}
+
+static def getDateMMddHHmm() {
+    new Date().format('MM-dd HH:mm')
+}
+

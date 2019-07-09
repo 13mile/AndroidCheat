@@ -27,18 +27,25 @@ android {
             it.buildConfigField 'boolean', 'DEV', 'false'
             signingConfig signingConfigs.config
             minifyEnabled false
+            it.buildConfigField "String", "BUILD_DATE", "\"" + getDateMMddHHmm() + "\""
+            it.buildConfigField "Long", "BUILD_DATE_MILLIS", '' + getDate() + 'L'
+            it.buildConfigField "Integer", "VERSION_SETTINGS", '5'
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            it.buildConfigField 'boolean', 'ALPHA', 'true'
+            it.buildConfigField 'boolean', 'DEV', 'false'
             signingConfig signingConfigs.config
         }
         debugDev {
-            applicationIdSuffix ".dev"
             it.buildConfigField 'boolean', 'DEV', 'true'
+            it.buildConfigField 'boolean', 'ALPHA', 'false'
             signingConfig signingConfigs.config
         }
         debug {
+            it.buildConfigField 'boolean', 'DEV', 'true'
+            it.buildConfigField 'boolean', 'ALPHA', 'false'
             signingConfig signingConfigs.config
         }
     }
@@ -56,5 +63,23 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
 
+    //RxActivityResult
+    implementation 'com.github.VictorAlbertos:RxActivityResult:0.5.0-2.x'
+
+    //13mile library
+    implementation 'com.github.13mile:nextm-lib:0.0.10'
+
+    // https://github.com/tbruyelle/RxPermissions
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+
+
     implementation project(':androidcheat')
+}
+
+static def getDate() {
+    System.currentTimeMillis()
+}
+
+static def getDateMMddHHmm() {
+    new Date().format('MM-dd HH:mm')
 }
