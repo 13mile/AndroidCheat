@@ -20,7 +20,10 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.layout_floating_cheat_widget.view.*
+import kr.nextm.lib.AppInstance
 import kr.nextm.lib.PreferencesHelper
+import com.androidcheat.cheat.FloatingLogViewService
+import kr.nextm.lib.TLog
 import java.util.concurrent.TimeUnit
 
 
@@ -203,11 +206,12 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
         }
 
         buttonNewInstance.setOnClickListener {
-//            startActivity(SplashActivity::class.java)
+            //            startActivity(SplashActivity::class.java)
         }
 
         buttonLogView.setOnClickListener {
-//            AppInstance.get().startService(Intent(AppInstance.get(), FloatingLogViewService::class.java))
+            it.context.startService(Intent(it.context, FloatingLogViewService::class.java))
+            TLog.d("bsjo push")
         }
 
         buttonLaunchLastCheatActivity.setOnClickListener {
@@ -231,16 +235,12 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
 
         refreshUi()
 
-        //Set the close button
         buttonCheatClose.setOnClickListener {
-            //            Prefs.save {
-//                Prefs.cheat.floatingCheatView = false
-//            }
             service.stopSelf()
         }
 
         buttonOpen.setOnClickListener {
-//            startActivity(SplashActivity::class.java)
+            //            startActivity(SplashActivity::class.java)
         }
 
     }
