@@ -21,3 +21,28 @@
              implementation 'com.github.13mile:androidcheat:0.0.2'
          }
          ```
+         
+         
+         ''' Application class onCreate() in word:
+         class App:Application() {
+                   override fun onCreate() {
+                   super.onCreate()
+         
+                   **Cheat.register<MainActivity, CheatActivity>()**
+                   **//{MainActivity} your initialize activity ,,**
+                   **// MainActivity have Intent filter (action.MAIN) And you have to specify (category.LAUNCHER).**
+                   
+                   ** {CheatActivity} your cheating activity.**
+                   ** {CheatActivity} inherits CheatBaseActivity.**
+                   }
+         }
+         '''
+         
+         
+         '''CheatAcitivity Setting and UseCase: 
+         class CheatActivity : CheatBaseActivity(){
+                  override fun initializeMenus() {
+                           rightMenu.addButton("hellow cheat worl")
+                  }
+         }
+         '''
