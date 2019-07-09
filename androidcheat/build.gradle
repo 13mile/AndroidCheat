@@ -76,15 +76,12 @@ dependencies {
 
     // https://github.com/tbruyelle/RxPermissions
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
-
-
-    implementation project(':androidcheat')
 }
 
 
 apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.13mile'
-version = '0.0.8'
+version = '0.0.9'
 
 
 repositories {
