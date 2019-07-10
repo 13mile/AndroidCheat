@@ -9,10 +9,10 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ScrollView
 import android.widget.TextView
 import com.androidcheat.BuildConfig
-import com.androidcheat.rx.toDialogMessage
-import com.androidcheat.rx.toJson
-import com.androidcheat.util.GsonHelper
-import com.androidcheat.util.TLog
+import k.bs.androidcheat.rx.toDialogMessage
+import k.bs.androidcheat.rx.toJson
+import k.bs.androidcheat.util.GsonHelper
+import k.bs.androidcheat.util.TLog
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 

@@ -7,7 +7,7 @@ import android.support.v7.widget.AppCompatButton
 import android.util.AttributeSet
 import android.util.TypedValue
 import com.androidcheat.R
-import com.androidcheat.rx.ignoreInterruption
+import k.bs.androidcheat.rx.ignoreInterruption
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable

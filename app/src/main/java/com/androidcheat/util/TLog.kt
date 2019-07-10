@@ -3,11 +3,7 @@ package com.androidcheat.util
 import android.util.Log
 import com.androidcheat.BuildConfig
 import com.google.gson.Gson
-import java.io.BufferedWriter
-import java.io.FileWriter
-import java.io.IOException
-import java.text.SimpleDateFormat
-import java.util.*
+import k.bs.androidcheat.util.TLog
 
 object TLog {
 

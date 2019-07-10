@@ -1,6 +1,6 @@
 package com.androidcheat.exception
 
-import com.androidcheat.util.TLog
+import k.bs.androidcheat.util.TLog
 
 open class ErrorLogException(val title: String, message: Any, cause: Throwable? = null) :
         RuntimeException(message.toString(), cause) {

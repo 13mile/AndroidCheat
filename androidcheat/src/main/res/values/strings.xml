@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidCheat</string>
+    <string name="need_permission_to" formatted="false">앱을 실행하려면, [%1$s] 권한이 필요합니다.</string>
+    <string name="canceled_by_user">사용자 취소</string>
+    <string name="check_permissions">권한 검사중...</string>
+    <string name="app_will_run_after_getting_essential_permissions">필수 권한을 허용해야 앱이 실행됩니다.</string>
 </resources>

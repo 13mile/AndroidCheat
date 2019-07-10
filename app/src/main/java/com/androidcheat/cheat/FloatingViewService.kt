@@ -9,8 +9,8 @@ import android.os.IBinder
 import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
-import com.androidcheat.prefs.Prefs
-import com.androidcheat.view.CheatView
+import k.bs.androidcheat.prefs.Prefs
+import k.bs.androidcheat.view.CheatView
 import kr.nextm.lib.TToast
 
 open class FloatingViewService : Service() {

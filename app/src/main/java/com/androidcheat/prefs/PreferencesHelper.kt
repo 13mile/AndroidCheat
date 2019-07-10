@@ -3,7 +3,7 @@ package com.androidcheat.prefs
 
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import com.androidcheat.util.GsonHelper
+import k.bs.androidcheat.util.GsonHelper
 import kr.nextm.lib.AppInstance
 
 

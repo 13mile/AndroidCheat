@@ -1,17 +1,18 @@
 package com.androidcheat.util
 
 import android.os.Build
-import com.androidcheat.exception.ErrorLogException
-import com.androidcheat.type.OutputType
+import k.bs.androidcheat.exception.ErrorLogException
+import k.bs.androidcheat.type.OutputType
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.TypeAdapter
 import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonWriter
-import com.androidcheat.type.JsonElementAs
-import com.androidcheat.type.JsonElementAsObject
-import com.androidcheat.type.JsonElementAsString
+import k.bs.androidcheat.type.JsonElementAs
+import k.bs.androidcheat.type.JsonElementAsObject
+import k.bs.androidcheat.type.JsonElementAsString
+import k.bs.androidcheat.util.TLog
 import java.lang.reflect.Type
 
 object GsonHelper {

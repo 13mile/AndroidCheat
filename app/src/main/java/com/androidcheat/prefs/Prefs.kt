@@ -1,9 +1,12 @@
 ﻿package com.androidcheat.prefs
 
 import com.androidcheat.BuildConfig
-import com.androidcheat.exception.ErrorLogException
+import k.bs.androidcheat.exception.ErrorLogException
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
+import k.bs.androidcheat.prefs.Cheat
+import k.bs.androidcheat.prefs.PreferencesHelper
+import k.bs.androidcheat.prefs.Prefs
 import kr.nextm.lib.TLog
 
 class Prefs {

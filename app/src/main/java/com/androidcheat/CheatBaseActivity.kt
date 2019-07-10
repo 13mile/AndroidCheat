@@ -7,11 +7,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.androidcheat.rx.networkThread
-import com.androidcheat.rx.onClickWithAnimation
-import com.androidcheat.util.TLog
-import com.androidcheat.view.TButton
+import k.bs.androidcheat.rx.networkThread
+import k.bs.androidcheat.rx.onClickWithAnimation
+import k.bs.androidcheat.util.TLog
+import k.bs.androidcheat.view.TButton
 import io.reactivex.Observable
+import k.bs.androidcheat.ActivityBase
 import kotlinx.android.synthetic.main.activity_cheat.*
 import java.util.concurrent.TimeUnit
 
