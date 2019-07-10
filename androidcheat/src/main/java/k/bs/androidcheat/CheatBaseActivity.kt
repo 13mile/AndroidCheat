@@ -17,13 +17,13 @@ import java.util.concurrent.TimeUnit
 
 abstract class CheatBaseActivity : ActivityBase() {
 
-    protected val rightMenu: LinearLayout
+    val rightMenu: LinearLayout
         get() = rightMenu
 
-    protected val leftMenu: LinearLayout
+    val leftMenu: LinearLayout
         get() = rightMenu
 
-    protected val bottomMenu: LinearLayout
+    val bottomMenu: LinearLayout
         get() = rightMenu
 
     override fun onCreate(savedInstanceState: Bundle?) {
