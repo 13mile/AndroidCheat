@@ -71,11 +71,15 @@ Manifest setting:
 
 getPermission :
 ```
-class MainActivity : CheatBaseActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Cheat.getPermission(this)
+    }
 
-            GrantPermissionCheckManager.check(this)
+    override fun onResume() {
+        super.onResume()
+        Cheat.showDebugInfoView(this)
     }
 }
 ```
