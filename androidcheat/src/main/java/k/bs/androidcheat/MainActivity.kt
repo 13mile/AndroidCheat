@@ -8,7 +8,6 @@ import k.bs.androidcheat.rx.startActivityForResult
 import k.bs.androidcheat.rx.toIntent
 import k.bs.androidcheat.util.DontCare
 import k.bs.androidcheat.util.TLog
-import kotlinx.android.synthetic.main.activity_cheat.*
 import kr.nextm.lib.TToast
 
 class MainActivity : CheatBaseActivity() {
