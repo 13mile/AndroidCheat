@@ -5,7 +5,7 @@ import k.bs.androidcheat.cheat.Cheat
 import k.bs.androidcheat.cheat.CheatActivity
 import rx_activity_result2.RxActivityResult
 
-class App:Application() {
+class MyAndroidCheadApp:Application() {
     override fun onCreate() {
         super.onCreate()
 //        RxActivityResult.register(this)
