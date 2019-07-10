@@ -75,20 +75,7 @@ class MainActivity : CheatBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        GrantPermissionsActivity::class.java
-            .toIntent()
-            .startActivityForResult<DontCare>(this)
-            .subscribe({
-                showDebugInfoView()
-            }, { e ->
-                
-            })
-    }
-
-    private fun showDebugInfoView() {
-        if (BuildConfig.DEV) {
-            startService(Intent(this, FloatingViewService::class.java))
-        }
+            GrantPermissionCheckManager.check(this)
     }
 }
 ```
