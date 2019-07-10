@@ -18,18 +18,18 @@ import java.util.concurrent.TimeUnit
 abstract class CheatBaseActivity : ActivityBase() {
 
     val rightMenu: LinearLayout
-        get() = rightMenu
-
+        get() = rMenu
     val leftMenu: LinearLayout
-        get() = rightMenu
-
+        get() = lMenu
     val bottomMenu: LinearLayout
-        get() = rightMenu
+        get() = bottomMenu
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_cheat)
+
+
 
         leftMenu.addButton("CLEAR") {
             Observable.timer(100, TimeUnit.MILLISECONDS)
