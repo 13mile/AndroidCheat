@@ -17,6 +17,15 @@ import java.util.concurrent.TimeUnit
 
 abstract class CheatBaseActivity : ActivityBase() {
 
+    protected val rightMenu: LinearLayout
+        get() = rightMenu
+
+    protected val leftMenu: LinearLayout
+        get() = rightMenu
+
+    protected val bottomMenu: LinearLayout
+        get() = rightMenu
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -47,7 +56,8 @@ abstract class CheatBaseActivity : ActivityBase() {
 
         addView(button)
 
-        button.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        button.layoutParams =
+            LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
 
         button.onClickWithAnimation {
             println("### $title pressed")
@@ -64,15 +74,21 @@ abstract class CheatBaseActivity : ActivityBase() {
 
         addView(textView)
 
-        textView.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        textView.layoutParams =
+            LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
 
         return textView
     }
 
-    protected fun LinearLayout.addEdit(tag: Any, defaultValue: String, functionOnClick: ((button: EditText) -> Unit)? = null): EditText {
+    protected fun LinearLayout.addEdit(
+        tag: Any,
+        defaultValue: String,
+        functionOnClick: ((button: EditText) -> Unit)? = null
+    ): EditText {
         val layout = LinearLayout(context)
         layout.orientation = LinearLayout.HORIZONTAL
-        layout.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        layout.layoutParams =
+            LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         addView(layout)
 
         val editText = EditText(context)
@@ -125,7 +141,8 @@ abstract class CheatBaseActivity : ActivityBase() {
             layout.addView(view)
             view.layoutParams = LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.MATCH_PARENT)
+                ViewGroup.LayoutParams.MATCH_PARENT
+            )
         }
 
         return editText
