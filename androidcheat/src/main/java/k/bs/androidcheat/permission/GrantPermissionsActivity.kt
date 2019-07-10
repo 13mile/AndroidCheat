@@ -2,6 +2,7 @@ package k.bs.androidcheat.permission
 
 import android.Manifest
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -13,13 +14,15 @@ import k.bs.androidcheat.rx.BaseRxActivity
 import k.bs.androidcheat.util.DontCare
 import k.bs.androidcheat.util.ignoreNotUsedWarning
 import com.tbruyelle.rxpermissions2.RxPermissions
+import k.bs.androidcheat.ActivityBase
 import k.bs.androidcheat.BuildConfig
 import k.bs.androidcheat.R
+import k.bs.androidcheat.cheat.FloatingViewService
 import k.bs.androidcheat.util.getString
 import kotlinx.android.synthetic.main.layout_grant_permission.*
 import kr.nextm.lib.TToast
 
-class GrantPermissionsActivity : BaseRxActivity() {
+class GrantPermissionsActivity : ActivityBase() {
     private val CODE_DRAW_OVER_OTHER_APP_PERMISSION = 10001
     private val REQUEST_CODE_PERMISSIONS = 10002
 
@@ -125,7 +128,7 @@ class GrantPermissionsActivity : BaseRxActivity() {
 
             startActivityForResult(intent, CODE_DRAW_OVER_OTHER_APP_PERMISSION)
         } else {
-            finishWithResponse(DontCare)
+            finish()
         }
     }
 
@@ -134,7 +137,7 @@ class GrantPermissionsActivity : BaseRxActivity() {
             CODE_DRAW_OVER_OTHER_APP_PERMISSION -> @RequiresApi(Build.VERSION_CODES.M) {
                 //Check if the permission is granted or not.
                 if (Settings.canDrawOverlays(this)) {
-                    finishWithResponse(DontCare)
+                    finish()
                 } else { //Permission is not available
                     TToast.show("Draw over other app permission not available. Closing the application")
                     finish()
@@ -149,7 +152,7 @@ class GrantPermissionsActivity : BaseRxActivity() {
 
             //Check if the permission is granted or not.
             if (Settings.canDrawOverlays(this)) {
-                finishWithResponse(DontCare)
+                finish()
             } else { //Permission is not available
                 TToast.show("Draw over other app permission not available. Closing the application")
                 finish()
@@ -157,5 +160,9 @@ class GrantPermissionsActivity : BaseRxActivity() {
         } else {
         }
 
+    }
+
+    fun showDebugInfoView(context: Context) {
+        context.startService(Intent(context, FloatingViewService::class.java))
     }
 }
