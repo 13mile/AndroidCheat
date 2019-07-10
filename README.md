@@ -79,3 +79,7 @@ class MainActivity : CheatBaseActivity() {
     }
 }
 ```
+
+
+floating Cheat View :
+![device-2019-07-09-173805](https://user-images.githubusercontent.com/39984656/60873300-1fcc5600-a271-11e9-809b-753b8f2128df.png)
