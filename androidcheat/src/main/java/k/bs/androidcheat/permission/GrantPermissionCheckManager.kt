@@ -37,9 +37,7 @@ object GrantPermissionCheckManager {
     }
 
 
-    private fun showDebugInfoView(context: Context) {
-        if (BuildConfig.DEV) {
-            context.startService(Intent(context, FloatingViewService::class.java))
-        }
+    fun showDebugInfoView(context: Context) {
+        context.startService(Intent(context, FloatingViewService::class.java))
     }
 }
