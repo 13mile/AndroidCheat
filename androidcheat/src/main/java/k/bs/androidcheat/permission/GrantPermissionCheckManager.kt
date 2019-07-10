@@ -13,7 +13,6 @@ import k.bs.androidcheat.R
 import kr.nextm.lib.TToast
 
 object GrantPermissionCheckManager {
-
     fun check(context: Context) {
         checkPermission(context)
             .subscribe({
