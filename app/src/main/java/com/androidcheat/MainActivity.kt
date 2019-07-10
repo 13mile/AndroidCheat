@@ -10,7 +10,7 @@ import k.bs.androidcheat.permission.GrantPermissionCheckManager
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        Cheat.register<MainActivity,CheatActivity>()
+//        Cheat.register<MainActivity,CheatActivity>(application)
 //        GrantPermissionCheckManager.check(this)
     }
 }
