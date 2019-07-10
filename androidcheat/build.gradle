@@ -76,9 +76,6 @@ dependencies {
 
     // https://github.com/tbruyelle/RxPermissions
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
-
-
-    implementation project(':androidcheat')
 }
 
 
