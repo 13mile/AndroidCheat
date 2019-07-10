@@ -10,8 +10,6 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.support.annotation.RequiresApi
-import k.bs.androidcheat.rx.BaseRxActivity
-import k.bs.androidcheat.util.DontCare
 import k.bs.androidcheat.util.ignoreNotUsedWarning
 import com.tbruyelle.rxpermissions2.RxPermissions
 import k.bs.androidcheat.ActivityBase
