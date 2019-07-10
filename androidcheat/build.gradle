@@ -72,7 +72,7 @@ dependencies {
     implementation 'com.github.VictorAlbertos:RxActivityResult:0.5.0-2.x'
 
     //13mile library
-    implementation 'com.github.13mile:nextm-lib:0.0.10'
+    implementation 'com.github.13mile:nextm-lib:0.0.14'
 
     // https://github.com/tbruyelle/RxPermissions
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
