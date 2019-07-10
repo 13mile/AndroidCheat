@@ -8,7 +8,7 @@ import rx_activity_result2.RxActivityResult
 class App:Application() {
     override fun onCreate() {
         super.onCreate()
-        RxActivityResult.register(this)
-        Cheat.register<MainActivity, CheatActivity>()
+//        RxActivityResult.register(this)
+//        Cheat.register<MainActivity, CheatActivity>()
     }
 }
