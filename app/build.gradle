@@ -78,6 +78,8 @@ dependencies {
     implementation project(':androidcheat')
 }
 
+apply plugin: 'com.github.dcendents.android-maven'
+
 static def getDate() {
     System.currentTimeMillis()
 }
