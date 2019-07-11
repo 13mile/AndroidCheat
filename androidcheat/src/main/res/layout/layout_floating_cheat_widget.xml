@@ -49,18 +49,18 @@
 
         </FrameLayout>
 
-        <TextView
-            android:id="@+id/textSummary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:shadowColor="#000"
-            android:shadowDx="2.0"
-            android:shadowDy="2.0"
-            android:shadowRadius="2.0"
-            android:text="BuildConfig"
-            android:textColor="#0f0"
-            android:textSize="20dp" />
+        <!--<TextView-->
+            <!--android:id="@+id/textSummary"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:shadowColor="#000"-->
+            <!--android:shadowDx="2.0"-->
+            <!--android:shadowDy="2.0"-->
+            <!--android:shadowRadius="2.0"-->
+            <!--android:text="BuildConfig"-->
+            <!--android:textColor="#0f0"-->
+            <!--android:textSize="20dp" />-->
 
 
     </LinearLayout>

@@ -39,7 +39,7 @@ class CheatView(val service: Service, val params: WindowManager.LayoutParams) : 
 
         setBuildClock()
 
-        setSummary()
+//        setSummary()
 
         setDetailText()
 
@@ -90,7 +90,7 @@ class CheatView(val service: Service, val params: WindowManager.LayoutParams) : 
     private fun setDetailText() {
 
         textDetails.text =
-            """hello world
+            """HELLO CHEAT WORLD!!
 ${BuildConfig.VERSION_NAME}/${BuildConfig.VERSION_CODE}
 BUILD DATE: ${BuildConfig.BUILD_DATE}
 IP: ${Ipv4Address.get().hostAddress}
@@ -189,10 +189,10 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
         }
     }
 
-    private fun setSummary() {
-        textSummary.text = """${BuildConfig.FLAVOR.capitalize()}.${BuildConfig.BUILD_TYPE.capitalize()}""".trimMargin()
-        textSummary.setTextColor(Color.GREEN)
-    }
+//    private fun setSummary() {
+//        textSummary.text = """${BuildConfig.FLAVOR.capitalize()}.${BuildConfig.BUILD_TYPE.capitalize()}""".trimMargin()
+//        textSummary.setTextColor(Color.GREEN)
+//    }
 
     private fun initializeButtons() {
 
