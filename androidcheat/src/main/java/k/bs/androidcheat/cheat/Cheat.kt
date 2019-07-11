@@ -24,6 +24,4 @@ object Cheat {
     fun stopDebugInfoView(context: Context) {
         context.stopService(Intent(context, FloatingViewService::class.java))
     }
-
-
 }
