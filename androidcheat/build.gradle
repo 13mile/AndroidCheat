@@ -81,7 +81,7 @@ dependencies {
 
 apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.13mile'
-version = '0.0.21'
+version = '0.0.22'
 
 
 repositories {
