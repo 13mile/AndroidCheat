@@ -24,6 +24,7 @@ import kr.nextm.lib.PreferencesHelper
 import k.bs.androidcheat.cheat.FloatingLogViewService
 import k.bs.androidcheat.BuildConfig
 import k.bs.androidcheat.R
+import kr.nextm.lib.TToast
 import java.util.concurrent.TimeUnit
 
 
@@ -196,17 +197,32 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
     private fun initializeButtons() {
 
         buttonCheat.setOnClickListener {
+            if (Cheat.cheatActivity ==null){
+                TToast.show("require Cheat.register() call")
+                return@setOnClickListener
+            }
+
             toggleExpansionView()
-            startActivity(Cheat.cheatActivity)
+            startActivity(Cheat.cheatActivity!!)
         }
 
         buttonRestart.setOnClickListener {
+            if (Cheat.initActivity ==null){
+                TToast.show("require Cheat.register() call")
+                return@setOnClickListener
+            }
+
             toggleExpansionView()
-            AppInstance.restart(Cheat.initActivity)
+            AppInstance.restart(Cheat.initActivity!!)
         }
 
         buttonNewInstance.setOnClickListener {
-            startActivity(Cheat.initActivity)
+            if (Cheat.initActivity ==null){
+                TToast.show("require Cheat.register() call")
+                return@setOnClickListener
+            }
+
+            startActivity(Cheat.initActivity!!)
         }
 
         buttonLogView.setOnClickListener {
