@@ -12,7 +12,8 @@
 
 
     <application
-            tools:replace="icon, label,theme">
+            android:icon="@mipmap/ic_launcher"
+            tools:replace="icon">
         <activity android:name="k.bs.androidcheat.MainActivity">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN"/>-->

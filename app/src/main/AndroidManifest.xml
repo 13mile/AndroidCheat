@@ -4,7 +4,8 @@
           package="com.androidcheat">
 
     <application
-            tools:replace="icon, label,theme">
+            android:icon="@mipmap/ic_launcher"
+            tools:replace="icon">
         <activity android:name=".MainActivity"/>
 
     </application>
