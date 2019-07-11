@@ -39,7 +39,7 @@ class CheatView(val service: Service, val params: WindowManager.LayoutParams) : 
 
         setBuildClock()
 
-        setSummary()
+//        setSummary()
 
         setDetailText()
 
@@ -88,10 +88,11 @@ class CheatView(val service: Service, val params: WindowManager.LayoutParams) : 
     }
 
     private fun setDetailText() {
+
         textDetails.text =
             """HELLO CHEAT WORLD!!
-${convertBuildConfig("VERSION_NAME")}/${convertBuildConfig("VERSION_CODE")}
-BUILD DATE: ${convertBuildConfig("BUILD_DATE")}
+${BuildConfig.VERSION_NAME}/${BuildConfig.VERSION_CODE}
+BUILD DATE: ${BuildConfig.BUILD_DATE}
 IP: ${Ipv4Address.get().hostAddress}
 MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
 
@@ -188,20 +189,15 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
         }
     }
 
-    private fun setSummary() {
-        if (getBuildConfigValue(this.context, "FLAVOR") != null)
-            textSummary.text =
-                """${convertBuildConfig("FLAVOR")?.capitalize()}.${convertBuildConfig("BUILD_TYPE")?.capitalize()}""".trimMargin()
-        else
-            textSummary.text =
-                """.${convertBuildConfig("BUILD_TYPE")?.capitalize()}""".trimMargin()
-        textSummary.setTextColor(Color.GREEN)
-    }
+//    private fun setSummary() {
+//        textSummary.text = """${BuildConfig.FLAVOR.capitalize()}.${BuildConfig.BUILD_TYPE.capitalize()}""".trimMargin()
+//        textSummary.setTextColor(Color.GREEN)
+//    }
 
     private fun initializeButtons() {
 
         buttonCheat.setOnClickListener {
-            if (Cheat.cheatActivity == null) {
+            if (Cheat.cheatActivity ==null){
                 TToast.show("require Cheat.register() call")
                 return@setOnClickListener
             }
@@ -211,7 +207,7 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
         }
 
         buttonRestart.setOnClickListener {
-            if (Cheat.initActivity == null) {
+            if (Cheat.initActivity ==null){
                 TToast.show("require Cheat.register() call")
                 return@setOnClickListener
             }
@@ -221,7 +217,7 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
         }
 
         buttonNewInstance.setOnClickListener {
-            if (Cheat.initActivity == null) {
+            if (Cheat.initActivity ==null){
                 TToast.show("require Cheat.register() call")
                 return@setOnClickListener
             }
@@ -279,25 +275,6 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         service.startActivity(intent)
-    }
-
-    fun convertBuildConfig(fieldName: String): String? =
-        getBuildConfigValue(this.context, fieldName).toString()
-
-    private fun getBuildConfigValue(context: Context, fieldName: String): Any? {
-        try {
-            val clazz = Class.forName(context.packageName + ".BuildConfig")
-            val field = clazz.getField(fieldName)
-            return field.get(null)
-        } catch (e: ClassNotFoundException) {
-            e.printStackTrace()
-        } catch (e: NoSuchFieldException) {
-            e.printStackTrace()
-        } catch (e: IllegalAccessException) {
-            e.printStackTrace()
-        }
-
-        return null
     }
 
 }
