@@ -30,12 +30,15 @@ class App:Application() {
           override fun onCreate() {
           super.onCreate()
 
-          Cheat.register<MainActivity, CheatActivity>()
+          Cheat.register<MainActivity, CheatActivity>(buildDate,buildType)
           //{MainActivity} your initialize activity 
           // MainActivity have Intent filter (action.MAIN) And you have to specify (category.LAUNCHER).
           
           //{CheatActivity} your cheating activity.
           //{CheatActivity} inherits CheatBaseActivity.
+          
+          //buildDate = System.currentTimeMillis()
+          //buildType = BuildConfig.BUILD_TYPE
           }
 }
 ```

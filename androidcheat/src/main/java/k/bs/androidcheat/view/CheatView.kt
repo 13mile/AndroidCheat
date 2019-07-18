@@ -39,7 +39,7 @@ class CheatView(val service: Service, val params: WindowManager.LayoutParams) : 
 
         setBuildClock()
 
-//        setSummary()
+        setSummary()
 
         setDetailText()
 
@@ -51,15 +51,18 @@ class CheatView(val service: Service, val params: WindowManager.LayoutParams) : 
     }
 
     private fun setBuildClock() {
-        Observable.interval(0, 1, TimeUnit.SECONDS)
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe {
-                textBuildTime.text = timeSinceBuild()
+        if (Cheat.buildDateMillis != null)
+            Observable.interval(0, 1, TimeUnit.SECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe {
+                    textBuildTime.text = timeSinceBuild()
 
-                val color: Int = colorByTimeElapsedSinceBuild()
+                    val color: Int = colorByTimeElapsedSinceBuild()
 
-                textBuildTime.setTextColor(color)
-            }
+                    textBuildTime.setTextColor(color)
+                }
+        else
+            textBuildTime.visibility = View.GONE
     }
 
     private fun timeSinceBuild(): String {
@@ -83,19 +86,15 @@ class CheatView(val service: Service, val params: WindowManager.LayoutParams) : 
     }
 
     private fun elapsedSinceBuild(): Double {
-        val diff = System.currentTimeMillis() - BuildConfig.BUILD_DATE_MILLIS
+        val diff = System.currentTimeMillis() - Cheat.buildDateMillis!!
         return diff / 1000.0
     }
 
     private fun setDetailText() {
-
         textDetails.text =
             """HELLO CHEAT WORLD!!
-${BuildConfig.VERSION_NAME}/${BuildConfig.VERSION_CODE}
-BUILD DATE: ${BuildConfig.BUILD_DATE}
-IP: ${Ipv4Address.get().hostAddress}
-MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
-
+            IP: ${Ipv4Address.get().hostAddress}
+            MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
     }
 
     override fun onDetachedFromWindow() {
@@ -189,15 +188,19 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
         }
     }
 
-//    private fun setSummary() {
-//        textSummary.text = """${BuildConfig.FLAVOR.capitalize()}.${BuildConfig.BUILD_TYPE.capitalize()}""".trimMargin()
-//        textSummary.setTextColor(Color.GREEN)
-//    }
+    private fun setSummary() {
+        if (Cheat.buildType != null) {
+            textSummary.text = "${Cheat.buildType!!.capitalize()}"
+            textSummary.setTextColor(Color.GREEN)
+        } else
+            textSummary.visibility = View.GONE
+
+    }
 
     private fun initializeButtons() {
 
         buttonCheat.setOnClickListener {
-            if (Cheat.cheatActivity ==null){
+            if (Cheat.cheatActivity == null) {
                 TToast.show("require Cheat.register() call")
                 return@setOnClickListener
             }
@@ -207,7 +210,7 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
         }
 
         buttonRestart.setOnClickListener {
-            if (Cheat.initActivity ==null){
+            if (Cheat.initActivity == null) {
                 TToast.show("require Cheat.register() call")
                 return@setOnClickListener
             }
@@ -217,7 +220,7 @@ MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
         }
 
         buttonNewInstance.setOnClickListener {
-            if (Cheat.initActivity ==null){
+            if (Cheat.initActivity == null) {
                 TToast.show("require Cheat.register() call")
                 return@setOnClickListener
             }
