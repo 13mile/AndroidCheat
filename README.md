@@ -30,7 +30,7 @@ class App:Application() {
           override fun onCreate() {
           super.onCreate()
 
-          Cheat.register<MainActivity, CheatActivity>(buildDate,buildType)
+          Cheat.register<MainActivity, CheatActivity>(buildDate,buildType,versionName)
           //{MainActivity} your initialize activity 
           // MainActivity have Intent filter (action.MAIN) And you have to specify (category.LAUNCHER).
           
@@ -39,6 +39,7 @@ class App:Application() {
           
           //buildDate = System.currentTimeMillis()
           //buildType = BuildConfig.BUILD_TYPE
+          //versionName = BuildConfig.VERSION_NAME
           }
 }
 ```

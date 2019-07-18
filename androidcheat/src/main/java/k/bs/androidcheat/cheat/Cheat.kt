@@ -9,15 +9,19 @@ object Cheat {
     var cheatActivity: Class<*>? = null
     var buildDateMillis: Long? = null
     var buildType: String? = null
+    var versionName: String? = null
+
 
     inline fun <reified INIT_ACTIVITY, reified CHEAT_ACTIVITY> register(
         buildDateMillis: Long? = null,
-        buildType: String? = null
+        buildType: String? = null,
+        versionName: String? = null
     ) {
         initActivity = INIT_ACTIVITY::class.java
         cheatActivity = CHEAT_ACTIVITY::class.java
         this.buildDateMillis = buildDateMillis
         this.buildType = buildType
+        this.versionName = versionName
     }
 
     fun getPermission(context: Context) {

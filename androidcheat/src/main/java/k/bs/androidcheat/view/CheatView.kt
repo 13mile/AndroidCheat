@@ -93,8 +93,9 @@ class CheatView(val service: Service, val params: WindowManager.LayoutParams) : 
     private fun setDetailText() {
         textDetails.text =
             """HELLO CHEAT WORLD!!
-            IP: ${Ipv4Address.get().hostAddress}
-            MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}"""
+VERSION : ${Cheat.versionName}
+IP: ${Ipv4Address.get().hostAddress}
+MODEL/SERIAL: ${Env.getModelName()}/${Env.getRawSerial()}""".trimMargin()
     }
 
     override fun onDetachedFromWindow() {
