@@ -13,7 +13,7 @@ allprojects {
     }
 }
 ```   
-
+<br>
 
 ### And add next dependencies in the build.gradle of the module    
 ```gradle
@@ -21,8 +21,7 @@ dependencies {
     implementation 'com.github.13mile:androidcheat:0.1'
 }
 ```    
-
-
+<br>
 
 ### Application class onCreate() in word   
 ```
@@ -43,7 +42,7 @@ class App:Application() {
           }
 }
 ```    
-
+<br>
 
 ### CheatAcitivity Setting and UseCase   
 ```
@@ -63,7 +62,8 @@ class CheatActivity : CheatBaseActivity(){
      }
  }    
 ```   
-  
+<br>  
+ 
 ### Manifest setting     
 ```
     <uses-permission
@@ -72,6 +72,7 @@ class CheatActivity : CheatBaseActivity(){
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> 
 ```
+<br>
 
 ### getPermission     
 ```
@@ -87,11 +88,12 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```      
-
+<br>
 
 ### floating Cheat View     
 ![device-2019-07-09-173805](https://user-images.githubusercontent.com/39984656/60873300-1fcc5600-a271-11e9-809b-753b8f2128df.png)     
 
+<br>
 
 ### license     
 ```
