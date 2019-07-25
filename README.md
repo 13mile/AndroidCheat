@@ -3,8 +3,8 @@
 # AndroidCheat
 
 
-# Setup . 
-## Add the JitPack repository in your build.gradle (top level module) . 
+# Setup    
+### Add the JitPack repository in your build.gradle (top level module)    
 ```gradle
 allprojects {
     repositories {
@@ -15,16 +15,16 @@ allprojects {
 ```   
 
 
-## And add next dependencies in the build.gradle of the module . 
+### And add next dependencies in the build.gradle of the module    
 ```gradle
 dependencies {
     implementation 'com.github.13mile:androidcheat:0.1'
 }
-```  
+```    
 
 
 
-## Application class onCreate() in word . 
+### Application class onCreate() in word   
 ```
 class App:Application() {
           override fun onCreate() {
@@ -42,10 +42,10 @@ class App:Application() {
           //versionName = BuildConfig.VERSION_NAME
           }
 }
-``` . 
+```    
 
 
-## CheatAcitivity Setting and UseCase . 
+### CheatAcitivity Setting and UseCase   
 ```
 class CheatActivity : CheatBaseActivity(){
      override fun initializeMenus() {
@@ -62,18 +62,18 @@ class CheatActivity : CheatBaseActivity(){
          }
      }
  }    
-``` . 
+```   
   
-## Manifest setting . 
+### Manifest setting     
 ```
     <uses-permission
             android:name="android.permission.WRITE_EXTERNAL_STORAGE"
             tools:remove="android:maxSdkVersion"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> 
-``` . 
+```
 
-## getPermission . 
+### getPermission     
 ```
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,14 +86,14 @@ class MainActivity : AppCompatActivity() {
         Cheat.showDebugInfoView(this)
     }
 }
-``` . 
+```      
 
 
-## floating Cheat View . 
-![device-2019-07-09-173805](https://user-images.githubusercontent.com/39984656/60873300-1fcc5600-a271-11e9-809b-753b8f2128df.png) .   
+### floating Cheat View     
+![device-2019-07-09-173805](https://user-images.githubusercontent.com/39984656/60873300-1fcc5600-a271-11e9-809b-753b8f2128df.png)     
 
 
-## license . 
+### license     
 ```
 MIT License
 
