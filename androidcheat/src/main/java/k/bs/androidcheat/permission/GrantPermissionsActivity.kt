@@ -114,7 +114,7 @@ class GrantPermissionsActivity : ActivityBase() {
 //    }
 
     private fun initializeDrawOverlays() {
-        val needToGetOverlayPermission = BuildConfig.DEV &&
+        val needToGetOverlayPermission = 
                 Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
                 !Settings.canDrawOverlays(this)
 
